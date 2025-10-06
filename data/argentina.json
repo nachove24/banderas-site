@@ -1,0 +1,155 @@
+{
+  "country": {
+    "id": "arg",
+    "name": "Argentina",
+    "flag": "flags/argentina.svg",
+    "info": "Seleccioná una provincia para ver su bandera y simbolismo."
+  },
+  "provinces": [
+    {
+      "id": "buenos_aires",
+      "name": "Buenos Aires",
+      "flag": "buenos_aires.svg",
+      "info": "La bandera de Buenos Aires representa la historia y el espíritu bonaerense. Sus colores y símbolos reflejan la tradición federal y la identidad de la provincia más poblada de Argentina.",
+      "map": "buenos_aires.svg"
+    },
+    {
+      "id": "ciudad_de_buenos_aires",
+      "name": "Ciudad Autónoma de Buenos Aires",
+      "flag": "ciudad_de_buenos_aires.svg",
+      "info": "La bandera de la Ciudad Autónoma de Buenos Aires representa la capital federal con sus colores característicos y símbolos que reflejan su importancia histórica y cultural."
+    },
+    {
+      "id": "catamarca",
+      "name": "Catamarca",
+      "flag": "catamarca.svg",
+      "info": "La bandera catamarqueña simboliza la identidad de esta provincia del noroeste argentino, con elementos que representan su rica historia y tradiciones."
+    },
+    {
+      "id": "chaco",
+      "name": "Chaco",
+      "flag": "chaco.svg",
+      "info": "La bandera del Chaco refleja la diversidad cultural y natural de esta provincia, con elementos que representan su identidad chaqueña."
+    },
+    {
+      "id": "chubut",
+      "name": "Chubut",
+      "flag": "chubut.svg",
+      "info": "La bandera de Chubut representa la identidad patagónica con elementos que simbolizan la naturaleza y la cultura de esta provincia austral."
+    },
+    {
+      "id": "cordoba",
+      "name": "Córdoba",
+      "flag": "cordoba.svg",
+      "info": "La bandera cordobesa simboliza la unión de los pueblos originarios y los colonos. Su diseño incluye elementos históricos que representan la rica herencia cultural de la provincia."
+    },
+    {
+      "id": "corrientes",
+      "name": "Corrientes",
+      "flag": "corrientes.svg",
+      "info": "La bandera correntina representa la identidad de esta provincia del noreste argentino, con elementos que simbolizan su historia y tradiciones."
+    },
+    {
+      "id": "entre_rios",
+      "name": "Entre Ríos",
+      "flag": "entre_rios.svg",
+      "info": "La bandera entrerriana simboliza la identidad de esta provincia mesopotámica, con elementos que representan su rica historia y cultura."
+    },
+    {
+      "id": "formosa",
+      "name": "Formosa",
+      "flag": "formosa.svg",
+      "info": "La bandera formoseña representa la identidad de esta provincia del noreste argentino, con elementos que simbolizan su diversidad cultural."
+    },
+    {
+      "id": "jujuy",
+      "name": "Jujuy",
+      "flag": "jujuy.svg",
+      "info": "La bandera jujeña simboliza la identidad de esta provincia del noroeste argentino, con elementos que representan su rica herencia cultural andina."
+    },
+    {
+      "id": "la_pampa",
+      "name": "La Pampa",
+      "flag": "la_pampa.svg",
+      "info": "La bandera pampeana representa la identidad de esta provincia de la región pampeana, con elementos que simbolizan su historia y tradiciones."
+    },
+    {
+      "id": "la_rioja",
+      "name": "La Rioja",
+      "flag": "la_rioja.svg",
+      "info": "La bandera riojana simboliza la identidad de esta provincia del noroeste argentino, con elementos que representan su rica historia y cultura."
+    },
+    {
+      "id": "mendoza",
+      "name": "Mendoza",
+      "flag": "mendoza.svg",
+      "info": "La bandera mendocina refleja la identidad vitivinícola y la majestuosidad de la Cordillera de los Andes que caracteriza a esta provincia."
+    },
+    {
+      "id": "misiones",
+      "name": "Misiones",
+      "flag": "misiones.svg",
+      "info": "La bandera misionera representa la identidad de esta provincia del noreste argentino, con elementos que simbolizan su rica historia jesuítica y natural."
+    },
+    {
+      "id": "neuquen",
+      "name": "Neuquén",
+      "flag": "neuquen.svg",
+      "info": "La bandera neuquina simboliza la identidad patagónica de esta provincia, con elementos que representan su naturaleza y cultura."
+    },
+    {
+      "id": "rio_negro",
+      "name": "Río Negro",
+      "flag": "rio_negro.svg",
+      "info": "La bandera rionegrina representa la identidad patagónica de esta provincia, con elementos que simbolizan su diversidad natural y cultural."
+    },
+    {
+      "id": "salta",
+      "name": "Salta",
+      "flag": "salta.svg",
+      "info": "La bandera salteña simboliza la identidad de esta provincia del noroeste argentino, con elementos que representan su rica herencia cultural y natural."
+    },
+    {
+      "id": "san_juan",
+      "name": "San Juan",
+      "flag": "san_juan.svg",
+      "info": "La bandera sanjuanina representa la identidad de esta provincia cuyana, con elementos que simbolizan su historia y tradiciones."
+    },
+    {
+      "id": "san_luis",
+      "name": "San Luis",
+      "flag": "san_luis.svg",
+      "info": "La bandera puntana simboliza la identidad de esta provincia de la región de Cuyo, con elementos que representan su historia y cultura."
+    },
+    {
+      "id": "santa_cruz",
+      "name": "Santa Cruz",
+      "flag": "santa_cruz.svg",
+      "info": "La bandera santacruceña representa la identidad patagónica de esta provincia austral, con elementos que simbolizan su naturaleza y cultura."
+    },
+    {
+      "id": "santa_fe",
+      "name": "Santa Fe",
+      "flag": "santa_fe.svg",
+      "info": "Su diseño incluye elementos históricos del federalismo argentino, representando la importancia de Santa Fe en la historia constitucional del país."
+    },
+    {
+      "id": "santiago_del_estero",
+      "name": "Santiago del Estero",
+      "flag": "santiago_del_estero.svg",
+      "info": "La bandera santiagueña simboliza la identidad de esta provincia del noroeste argentino, con elementos que representan su rica herencia cultural."
+    },
+    {
+      "id": "tierra_del_fuego",
+      "name": "Tierra del Fuego",
+      "flag": "tierra_del_fuego.svg",
+      "info": "La bandera fueguina representa la identidad de esta provincia austral, con elementos que simbolizan su naturaleza única y su historia."
+    },
+    {
+      "id": "tucuman",
+      "name": "Tucumán",
+      "flag": "tucuman.svg",
+      "info": "Conocida como la 'Cuna de la Independencia', la bandera tucumana simboliza el espíritu independentista y la importancia histórica de la provincia."
+    }
+  ]
+}

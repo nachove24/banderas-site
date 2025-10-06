@@ -1,0 +1,29 @@
+{
+  "country": {
+    "id": "chl",
+    "name": "Chile",
+    "flag": "flags/chile.svg",
+    "info": "Seleccioná una región para ver su bandera y simbolismo."
+  },
+  "provinces": [
+    {
+      "id": "santiago",
+      "name": "Región Metropolitana",
+      "flag": "santiago.svg",
+      "info": "La región metropolitana de Santiago representa el corazón administrativo y cultural de Chile.",
+      "map": "santiago.svg"
+    },
+    {
+      "id": "valparaiso",
+      "name": "Región de Valparaíso",
+      "flag": "valparaiso.svg",
+      "info": "Región costera que alberga el principal puerto de Chile y la sede del Congreso Nacional."
+    },
+    {
+      "id": "biobio",
+      "name": "Región del Biobío",
+      "flag": "biobio.svg",
+      "info": "Región del sur de Chile conocida por su rica tradición cultural y su importancia industrial."
+    }
+  ]
+}

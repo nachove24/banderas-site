@@ -1,0 +1,32 @@
+:root{ --gap:16px; --panel-width:340px; font-family:system-ui,Arial,Helvetica;}
+body{margin:0; padding:0; box-sizing:border-box;}
+header{padding:12px; display:flex; gap:12px; align-items:center; background:#f5f5f5;}
+.layout{display:grid; grid-template-columns: 1fr var(--panel-width); gap:var(--gap); padding:var(--gap);}
+.map{border:1px solid #ddd; min-height:60vh; display:flex; align-items:center; justify-content:center; background:#fff;}
+.panel{padding:12px; border-left:1px solid #eee; background:#fafafa;}
+#flag-wrap img, #province-flag-wrap img{width:100%; max-height:150px; object-fit:contain; display:block;}
+.province{cursor:pointer;}
+.province:hover{outline: none; filter:brightness(0.9); stroke:#000; stroke-width:1;}
+.hidden{display:none;}
+.loading{color:#666;}
+
+/* Estilos para la sección de provincia */
+#province-section{margin-top:24px; padding-top:16px; border-top:1px solid #ddd;}
+#province-section h3{color:#333; margin:8px 0; font-size:1.1em;}
+#province-section p{color:#666; margin:8px 0 12px 0; font-size:0.9em;}
+
+/* Estilos para el botón "Ver más..." */
+.view-more-btn{
+  background:#007bff;
+  color:white;
+  border:none;
+  padding:8px 16px;
+  border-radius:4px;
+  cursor:pointer;
+  font-size:0.9em;
+  transition:background 0.2s;
+}
+.view-more-btn:hover{background:#0056b3;}
+.view-more-btn:active{background:#004085;}
+
+@media(max-width:800px){ .layout{grid-template-columns:1fr; } .panel{order:2;} .map{order:1;} }
