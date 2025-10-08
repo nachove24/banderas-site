@@ -29,4 +29,85 @@ header{padding:12px; display:flex; gap:12px; align-items:center; background:#f5f
 .view-more-btn:hover{background:#0056b3;}
 .view-more-btn:active{background:#004085;}
 
+/* Estilos para departamentos */
+.department{cursor:pointer;}
+.department:hover{outline: none; filter:brightness(0.9); stroke:#000; stroke-width:1;}
+.department.selected{fill:#ffeb3b; stroke:#ff9800; stroke-width:2;}
+.department.dimmed{opacity:0.7;}
+
+/* Los textos de los mapas no deben bloquear clics en paths */
+.map svg text{pointer-events:none;}
+
+/* Estilos para el contenedor de ciudades */
+.cities-container{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:12px;
+}
+
+.city-item{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  padding:8px;
+  background:#fff;
+  border:1px solid #e0e0e0;
+  border-radius:6px;
+  transition:box-shadow 0.2s;
+}
+
+.city-item:hover{
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.city-flag{
+  width:60px;
+  height:40px;
+  object-fit:contain;
+  flex-shrink:0;
+  border:1px solid #ddd;
+  border-radius:4px;
+}
+
+/* Interacción: permitir clic para ampliar bandera de ciudad */
+.city-item{ cursor:pointer; }
+.city-flag{ transition: width 0.2s ease, height 0.2s ease; }
+
+/* 70% del alto de banderas provinciales (150px => 105px) */
+.city-item.expanded .city-flag{
+  height:105px;
+  width:auto;
+}
+
+.city-info{
+  flex:1;
+}
+
+.city-info h4{
+  margin:0 0 4px 0;
+  font-size:0.95em;
+  color:#333;
+}
+
+.city-info p{
+  margin:0;
+  font-size:0.85em;
+  color:#666;
+  line-height:1.4;
+}
+
 @media(max-width:800px){ .layout{grid-template-columns:1fr; } .panel{order:2;} .map{order:1;} }
+
+/* Bandera departamental opcional */
+.department-flag-wrap{
+  margin:4px 0 8px 0;
+}
+.department-flag{
+  width:100%;
+  max-height:90px;
+  object-fit:contain;
+  display:block;
+  border:1px solid #ddd;
+  border-radius:4px;
+}

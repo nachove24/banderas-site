@@ -11,7 +11,45 @@
       "name": "Buenos Aires",
       "flag": "buenos_aires.svg",
       "info": "La bandera de Buenos Aires representa la historia y el espíritu bonaerense. Sus colores y símbolos reflejan la tradición federal y la identidad de la provincia más poblada de Argentina.",
-      "map": "buenos_aires.svg"
+      "map": "buenos_aires.svg",
+      "departments": [
+        {
+          "id": "la_plata",
+          "name": "La Plata",
+          "cities": [
+            {
+              "id": "la_plata_capital",
+              "name": "La Plata",
+              "flag": "cities/la_plata.svg",
+              "info": "Capital de la provincia de Buenos Aires, conocida como la 'Ciudad de las Diagonales'."
+            },
+            {
+              "id": "tolosa",
+              "name": "Tolosa",
+              "flag": "cities/tolosa.svg",
+              "info": "Localidad del partido de La Plata."
+            }
+          ]
+        },
+        {
+          "id": "mar_del_plata",
+          "name": "Mar del Plata",
+          "cities": [
+            {
+              "id": "mar_del_plata_capital",
+              "name": "Mar del Plata",
+              "flag": "cities/mar_del_plata.svg",
+              "info": "Principal centro turístico de la costa atlántica argentina."
+            },
+            {
+              "id": "miramar",
+              "name": "Miramar",
+              "flag": "cities/miramar.svg",
+              "info": "Ciudad balnearia del partido de General Alvarado."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "ciudad_de_buenos_aires",
@@ -131,7 +169,238 @@
       "id": "santa_fe",
       "name": "Santa Fe",
       "flag": "santa_fe.svg",
-      "info": "Su diseño incluye elementos históricos del federalismo argentino, representando la importancia de Santa Fe en la historia constitucional del país."
+      "info": "Su diseño incluye elementos históricos del federalismo argentino, representando la importancia de Santa Fe en la historia constitucional del país.",
+      "map": "santa_fe.svg",
+      "departments": [
+        {
+          "id": "nueve_de_julio",
+          "name": "Nueve de Julio",
+          "cities": [
+            {
+              "id": "tostado",
+              "name": "Tostado",
+              "flag": "cities/tostado.svg",
+              "info": "Cabecera del Dpto. 9 de Julio."
+            }
+          ]
+        },
+        {
+          "id": "rosario",
+          "name": "Rosario",
+          "cities": [
+            {
+              "id": "rosario_cabecera",
+              "name": "Rosario",
+              "flag": "cities/rosario.svg",
+              "info": "Cabecera del Dpto. Rosario."
+            }
+          ]
+        },
+        {
+          "id": "vera",
+          "name": "Vera",
+          "cities": [
+            {
+              "id": "vera_cabecera",
+              "name": "Vera",
+              "flag": "cities/vera.svg",
+              "info": "Cabecera del Dpto. Vera."
+            }
+          ]
+        },
+        {
+          "id": "general_obligado",
+          "name": "General Obligado",
+          "cities": [
+            {
+              "id": "reconquista",
+              "name": "Reconquista",
+              "flag": "cities/reconquista.svg",
+              "info": "Cabecera del Dpto. General Obligado."
+            }
+          ]
+        },
+        {
+          "id": "san_cristobal",
+          "name": "San Cristóbal",
+          "cities": [
+            {
+              "id": "san_cristobal_cabecera",
+              "name": "San Cristóbal",
+              "flag": "cities/san_cristobal.svg",
+              "info": "Cabecera del Dpto. San Cristóbal."
+            }
+          ]
+        },
+        {
+          "id": "san_justo",
+          "name": "San Justo",
+          "cities": [
+            {
+              "id": "san_justo_cabecera",
+              "name": "San Justo",
+              "flag": "cities/san_justo.svg",
+              "info": "Cabecera del Dpto. San Justo."
+            }
+          ]
+        },
+        {
+          "id": "san_javier",
+          "name": "San Javier",
+          "cities": [
+            {
+              "id": "romang",
+              "name": "Romang",
+              "flag": "cities/romang.svg",
+              "info": "Ubicado al norte del departamento de San Javier."
+            }
+          ]
+        },
+        {
+          "id": "garay",
+          "name": "Garay",
+          "cities": [
+            {
+              "id": "helvecia",
+              "name": "Helvecia",
+              "flag": "cities/helvecia.svg",
+              "info": "Cabecera del Departamento Garay."
+            }
+          ]
+        },
+        {
+          "id": "la_capital",
+          "name": "La Capital",
+          "cities": [
+            {
+              "id": "santa_fe",
+              "name": "Santa Fe",
+              "flag": "cities/santa_fe.svg",
+              "info": "Cabecera del Dpto. La Capital y capital de la provincia de Santa Fe."
+            }
+          ]
+        },
+        {
+          "id": "las_colonias",
+          "name": "Las Colonias",
+          "cities": [
+            {
+              "id": "esperanza",
+              "name": "Esperanza",
+              "flag": "cities/esperanza.svg",
+              "info": "Cabecera del Dpto. Las Colonias."
+            }
+          ]
+        },
+        {
+          "id": "castellanos",
+          "name": "Castellano",
+          "cities": [
+            {
+              "id": "rafaela",
+              "name": "Rafaela",
+              "flag": "cities/rafaela.svg",
+              "info": "Cabecera del Dpto. Castellano."
+            }
+          ]
+        },
+        {
+          "id": "san_martin",
+          "name": "San Martin",
+          "cities": [
+            {
+              "id": "el_trebol",
+              "name": "El Trébol",
+              "flag": "cities/el_trebol.svg",
+              "info": "Ubicado al sur del departamento de San Martin."
+            }
+          ]
+        },
+        {
+          "id": "san_jeronimo",
+          "name": "San Jerónimo",
+          "cities": [
+            {
+              "id": "coronda",
+              "name": "Coronda",
+              "flag": "cities/coronda.svg",
+              "info": "Cabecera del Dpto. San Jerónimo."
+            }
+          ]
+        },
+        {
+          "id": "belgrano",
+          "name": "Belgrano",
+          "cities": [
+            {
+              "id": "las_parejas",
+              "name": "Las Parejas",
+              "flag": "cities/las_parejas.svg",
+              "info": "Segunda ciudad más poblada del departamento de Belgrano."
+            }
+          ]
+        },
+        {
+          "id": "iriondo",
+          "name": "Iriondo",
+          "cities": [
+            {
+              "id": "canada_de_gomez",
+              "name": "Cañada de Gómez",
+              "flag": "cities/canada_de_gomez.svg",
+              "info": "Cabecera del Dpto. Iriondo."
+            }
+          ]
+        },
+        {
+          "id": "san_lorenzo",
+          "name": "San Lorenzo",
+          "cities": [
+            {
+              "id": "carcarana",
+              "name": "Carcaráña",
+              "flag": "cities/carcarana.svg",
+              "info": "Tercera ciudad más poblada del departamento de San Lorenzo."
+            }
+          ]
+        },
+        {
+          "id": "caseros",
+          "name": "Caseros",
+          "cities": [
+            {
+              "id": "casilda",
+              "name": "Casilda",
+              "flag": "cities/casilda.svg",
+              "info": "Cabecera del Dpto. Caseros."
+            }
+          ]
+        },
+        {
+          "id": "constitucion",
+          "name": "Constitución",
+          "cities": [
+            {
+              "id": "villa_constitucion",
+              "name": "Villa Constitución",
+              "flag": "cities/villa_constitucion.svg",
+              "info": "Cabecera del Dpto. Constitución."
+            }
+          ]
+        },
+        {
+          "id": "general_lopez",
+          "name": "General López",
+          "cities": [
+            {
+              "id": "venado_tuerto",
+              "name": "Venado Tuerto",
+              "flag": "cities/venado_tuerto.svg",
+              "info": "Ciudad más poblada del departamento de General López."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "santiago_del_estero",

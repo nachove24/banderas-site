@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="224.89583mm"
+   height="132.29166mm"
+   viewBox="0 0 224.89582 132.29165"
+   version="1.1"
+   id="svg1534"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Bandera de Coronda, Santa Fe.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1536"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.32756265"
+     inkscape:cx="215.226"
+     inkscape:cy="209.1203"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g7348" />
+  <defs
+     id="defs1531" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-58.552246,-86.098427)">
+    <g
+       id="g7348">
+      <g
+         id="g7371">
+        <rect
+           style="fill:#59a697;fill-opacity:1;stroke:none;stroke-width:5.91869;stroke-linecap:round;stroke-linejoin:round"
+           id="rect1629"
+           width="224.89583"
+           height="132.29166"
+           x="58.552246"
+           y="86.098427" />
+        <rect
+           style="fill:#5582c3;fill-opacity:1;stroke:none;stroke-width:2.02345;stroke-linecap:round;stroke-linejoin:round"
+           id="rect1629-1"
+           width="70.55555"
+           height="132.29166"
+           x="58.552246"
+           y="86.098427" />
+        <rect
+           style="fill:#c14737;fill-opacity:1;stroke:none;stroke-width:2.02345;stroke-linecap:round;stroke-linejoin:round"
+           id="rect1629-1-2"
+           width="70.55555"
+           height="132.29166"
+           x="212.8925"
+           y="86.098427" />
+        <g
+           id="g6908"
+           transform="matrix(1.0592468,-0.60993489,0.60993489,1.0592468,-74.050255,43.234665)">
+          <g
+             id="g7156">
+            <g
+               id="g7151"
+               transform="matrix(7.2393031,-0.0079483,-0.0079483,7.2485297,-484.98487,-513.03071)">
+              <path
+                 style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.187734px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 84.355702,100.41629 v -8.630956 l -0.834284,0.392865 1.05145,-2.484881 1.051672,2.484881 -0.833664,-0.392866 v 8.630957 z"
+                 id="path4322-0"
+                 sodipodi:nodetypes="cccccccc" />
+              <path
+                 style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.187734px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 80.852864,98.399321 7.464691,-4.332642 0.07902,0.918765 1.621294,-2.156754 -2.677037,0.337818 0.758269,0.5238 -7.464692,4.332642 z"
+                 id="path4322-0-2"
+                 sodipodi:nodetypes="cccccccc" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
