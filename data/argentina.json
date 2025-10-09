@@ -189,7 +189,7 @@
           "name": "Rosario",
           "cities": [
             {
-              "id": "rosario_cabecera",
+              "id": "rosario_capital",
               "name": "Rosario",
               "flag": "cities/rosario.svg",
               "info": "Cabecera del Dpto. Rosario."

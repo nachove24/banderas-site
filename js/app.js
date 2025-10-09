@@ -303,28 +303,37 @@ function onDepartmentClick(departmentId) {
   
   // Crear HTML para mostrar (opcional) bandera departamental y las banderas de las ciudades
   let citiesHTML = '';
-  // Bandera departamental (si hay)
+  // Bandera departamental (solo si existe y se puede cargar)
   const deptFlagSrc = buildDepartmentFlagPath(currentProvince.id, dept);
   if (deptFlagSrc) {
     citiesHTML += `
       <div class="department-flag-wrap">
-        <img src="${deptFlagSrc}" alt="Bandera del departamento ${dept.name}" class="department-flag" />
+        <img src="${deptFlagSrc}" 
+             alt="Bandera del departamento ${dept.name}" 
+             class="department-flag"
+             onerror="this.parentElement.style.display='none'" />
       </div>
     `;
   }
+
   if (dept.cities && dept.cities.length > 0) {
     citiesHTML += '<div class="cities-container">';
     dept.cities.forEach(city => {
       const cityFlagPath = buildCityFlagPath(currentProvince.id, dept.id, city);
-      citiesHTML += `
-        <div class="city-item">
-          <img src="${cityFlagPath}" alt="Bandera de ${city.name}" class="city-flag" />
-          <div class="city-info">
-            <h4>${city.name}</h4>
-            <p>${city.info || 'Sin información disponible.'}</p>
+      if (cityFlagPath) {
+        citiesHTML += `
+          <div class="city-item">
+            <img src="${cityFlagPath}" 
+                 alt="Bandera de ${city.name}" 
+                 class="city-flag"
+                 onerror="this.parentElement.style.display='none'" />
+            <div class="city-info">
+              <h4>${city.name}</h4>
+              <p>${city.info || 'Sin información disponible.'}</p>
+            </div>
           </div>
-        </div>
-      `;
+        `;
+      }
     });
     citiesHTML += '</div>';
   } else {
