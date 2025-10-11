@@ -2,15 +2,17 @@
 const COUNTRY_CONFIG = {
   'argentina': {
     dataUrl: 'data/argentina.json',
-    svgUrl: 'maps/argentina.svg',
-    provincesPath: 'flags/provinces/',
-    mapsPath: 'maps/provinces/'
+    svgUrl: 'maps/argentina/argentina.svg',
+    flagPath: 'flags/argentina/',
+    provincesPath: 'flags/argentina/provinces/',
+    mapsPath: 'maps/argentina/provinces/'
   },
   'chile': {
     dataUrl: 'data/chile.json',
-    svgUrl: 'maps/chile.svg',
-    provincesPath: 'flags/provinces/',
-    mapsPath: 'maps/provinces/'
+    svgUrl: 'maps/chile/chile.svg',
+    flagPath: 'flags/chile/',      // Nueva propiedad
+    provincesPath: 'flags/chile/provinces/',
+    mapsPath: 'maps/chile/provinces/'
   }
   // Aquí podrás agregar más países en el futuro:
   // 'uruguay': {
@@ -91,10 +93,9 @@ function buildDepartmentFlagPath(provinceId, department) {
 }
 
 function buildCityFlagPath(provinceId, departmentId, city) {
-  if (!provinceId || !departmentId || !city) return '';
+ if (!provinceId || !departmentId || !city) return '';
   if (city.flag && city.flag.startsWith('http')) return city.flag;
   
-  // Eliminar 'cities/' del flag si viene incluido
   const fileName = city.flag ? 
     city.flag.replace('cities/', '') : 
     `${city.id}.svg`;
@@ -139,7 +140,12 @@ function showCountryInfo() {
   // Mostrar información del país
   nameEl.textContent = data.country.name;
   infoEl.textContent = data.country.info;
-  flagImg.src = data.country.flag;
+  // Construir ruta de la bandera del país
+  const countryFlagPath = data.country.flag.startsWith('http') 
+    ? data.country.flag 
+    : `${config.flagPath}${data.country.flag}`;
+  
+  flagImg.src = countryFlagPath;
   
   // Mostrar sección del país y ocultar sección de provincia
   countrySection.classList.remove('hidden');
@@ -232,19 +238,20 @@ backBtn.addEventListener('click', () => {
     provinceNameEl.textContent = currentProvince.name;
     provinceInfoEl.textContent = currentProvince.info || 'Sin información disponible.';
     
-    // Recargar el mapa de la provincia
+     // Recargar el mapa de la provincia con la nueva estructura
     const provinceMapPath = currentProvince.map.startsWith('http')
       ? currentProvince.map
-      : config.mapsPath + currentProvince.map;
+      : `${config.mapsPath}${currentProvince.map}`; // Ya incluye /provinces/
+      
     loadSVGInto(provinceMapPath, mapContainer).then(() => {
       ensureDepartmentClasses();
       attachDepartmentHandlers();
     });
     if (viewMoreBtn) viewMoreBtn.classList.add('hidden');
   } else {
-    // Volver de la provincia al país
+    // Volver al mapa del país
     showCountryInfo();
-    loadSVGInto(SVG_URL, mapContainer).then(attachProvinceHandlers);
+    loadSVGInto(config.svgUrl, mapContainer).then(attachProvinceHandlers);
   }
 });
 
@@ -261,10 +268,13 @@ window.addEventListener('DOMContentLoaded', init);
 if (viewMoreBtn) {
   viewMoreBtn.addEventListener('click', () => {
     if (!currentProvince) return;
-    if (!currentProvince.map) return; // no hacer nada si no hay mapa provincial definido
+    if (!currentProvince.map) return;  // no hacer nada si no hay mapa provincial definido
+    
+    // Construir ruta del mapa provincial
     const provinceMapPath = currentProvince.map.startsWith('http')
       ? currentProvince.map
-      : config.mapsPath + currentProvince.map;
+      : `${config.mapsPath}${currentProvince.map}`; 
+
     loadSVGInto(provinceMapPath, mapContainer).then(() => {
       ensureDepartmentClasses();
       attachDepartmentHandlers();
@@ -355,6 +365,13 @@ function onDepartmentClick(departmentId) {
   attachCityExpandHandlers(); // Esta función ahora maneja TODOS los elementos con clase city-item
   
   highlightDepartment(departmentId);
+
+  try {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } catch(_) {
+    window.scrollTo(0, 0);
+  }
+
 }
 
 function attachCityExpandHandlers() {

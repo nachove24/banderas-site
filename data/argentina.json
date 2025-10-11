@@ -2,7 +2,7 @@
   "country": {
     "id": "arg",
     "name": "Argentina",
-    "flag": "flags/argentina.svg",
+    "flag": "argentina.svg",
     "info": "Seleccioná una provincia para ver su bandera y simbolismo."
   },
   "provinces": [
