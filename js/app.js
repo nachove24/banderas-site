@@ -93,12 +93,12 @@ function buildDepartmentFlagPath(provinceId, department) {
 function buildCityFlagPath(provinceId, departmentId, city) {
   if (!provinceId || !departmentId || !city) return '';
   if (city.flag && city.flag.startsWith('http')) return city.flag;
-  if (city.flag && city.flag.includes('/')) {
-    // Mantener compatibilidad si ya viene armado con subcarpetas
-    return `${config.provincesPath}${city.flag}`;
-  }
-  const fileName = city.flag ? city.flag : `${city.id}.svg`;
-  // Nueva estructura sin carpeta cityId; los archivos de ciudades viven directamente dentro de cities/
+  
+  // Eliminar 'cities/' del flag si viene incluido
+  const fileName = city.flag ? 
+    city.flag.replace('cities/', '') : 
+    `${city.id}.svg`;
+    
   return `${config.provincesPath}${provinceId}/departments/${departmentId}/cities/${fileName}`;
 }
 
@@ -290,32 +290,45 @@ function attachDepartmentHandlers() {
 
 function onDepartmentClick(departmentId) {
   const dept = currentProvince.departments.find(d => d.id === departmentId);
-  if (!dept) {
-    console.warn('Departamento no encontrado: ', departmentId);
-    return;
-  }
+  if (!dept) return;
+
+   console.log('Rutas de banderas:', {
+    departmental: buildDepartmentFlagPath(currentProvince.id, dept),
+    cities: dept.cities?.map(city => ({
+      name: city.name,
+      path: buildCityFlagPath(currentProvince.id, dept.id, city)
+    }))
+  });
+  
+  // ...resto del código...
+
   
   currentLevel = 'department';
   currentDepartment = dept;
-  
-  // Actualizar el panel con información del departamento y ciudades
+
+  // Actualizar el título para mostrar Provincia - Departamento
   provinceNameEl.textContent = `${currentProvince.name} - ${dept.name}`;
   
-  // Crear HTML para mostrar (opcional) bandera departamental y las banderas de las ciudades
   let citiesHTML = '';
-  // Bandera departamental (solo si existe y se puede cargar)
+  
+  // Contenedor de bandera departamental con el mismo estilo que las ciudades
   const deptFlagSrc = buildDepartmentFlagPath(currentProvince.id, dept);
   if (deptFlagSrc) {
     citiesHTML += `
-      <div class="department-flag-wrap">
+      <div class="city-item">
         <img src="${deptFlagSrc}" 
              alt="Bandera del departamento ${dept.name}" 
-             class="department-flag"
+             class="city-flag"
              onerror="this.parentElement.style.display='none'" />
+        <div class="city-info">
+          <h4>Dpto. de ${dept.name}</h4>
+          <p>Bandera departamental</p>
+        </div>
       </div>
     `;
   }
 
+  // Contenedor de ciudades
   if (dept.cities && dept.cities.length > 0) {
     citiesHTML += '<div class="cities-container">';
     dept.cities.forEach(city => {
@@ -336,22 +349,41 @@ function onDepartmentClick(departmentId) {
       }
     });
     citiesHTML += '</div>';
-  } else {
-    citiesHTML += '<p>No hay ciudades con banderas registradas en este departamento.</p>';
   }
-  
-  provinceInfoEl.innerHTML = citiesHTML;
-  attachCityExpandHandlers();
-  
-  // Resaltar el departamento seleccionado
-  highlightDepartment(departmentId);
 
-  // Desplazar al tope para ver el panel con la info actualizada
-  try {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  } catch(_) {
-    window.scrollTo(0, 0);
-  }
+  provinceInfoEl.innerHTML = citiesHTML || '<p>No hay banderas registradas en este departamento.</p>';
+  attachCityExpandHandlers(); // Esta función ahora maneja TODOS los elementos con clase city-item
+  
+  highlightDepartment(departmentId);
+}
+
+function attachCityExpandHandlers() {
+  const cityItems = provinceInfoEl.querySelectorAll('.city-item');
+  if (!cityItems.length) return;
+
+  let currentExpanded = null;
+
+  cityItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Si clickeamos el ya expandido: colapsar
+      if (item.classList.contains('expanded')) {
+        item.classList.remove('expanded');
+        currentExpanded = null;
+        return;
+      }
+
+      // Colapsar el previamente expandido
+      if (currentExpanded && currentExpanded !== item) {
+        currentExpanded.classList.remove('expanded');
+      }
+
+      // Expandir el actual
+      item.classList.add('expanded');
+      currentExpanded = item;
+    });
+  });
 }
 
 function highlightDepartment(id) {

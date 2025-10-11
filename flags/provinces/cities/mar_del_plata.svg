@@ -1,6 +1,0 @@
-<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="120" fill="#00acc1"/>
-  <path d="M20 60 Q100 20 180 60 Q100 100 20 60 Z" fill="#fff"/>
-  <text x="100" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#00acc1">MDP</text>
-</svg>
-

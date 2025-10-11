@@ -199,6 +199,7 @@
         {
           "id": "vera",
           "name": "Vera",
+          "flag": "vera_dpto.svg",
           "cities": [
             {
               "id": "vera_cabecera",
@@ -235,6 +236,7 @@
         {
           "id": "san_justo",
           "name": "San Justo",
+          "flag": "san_justo_dpto.svg",
           "cities": [
             {
               "id": "san_justo_cabecera",
